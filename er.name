@@ -1,0 +1,179 @@
+[33mcommit 964de066b64450ccb7440a462442d41510243543[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author:     Your Name <bapathisharanyareddy@gmail.com>
+AuthorDate: Wed Jul 29 21:50:07 2026 +0530
+Commit:     Your Name <bapathisharanyareddy@gmail.com>
+CommitDate: Wed Jul 29 21:50:07 2026 +0530
+
+    Initial commit
+
+[1mdiff --git a/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/output.txt b/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/output.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1ed4936[m
+[1m--- /dev/null[m
+[1m+++ b/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/output.txt[m
+[36m@@ -0,0 +1,25 @@[m
+[32m+[m[32mFirst five rows of the dataset:[m
+[32m+[m[32m   sepal_length  sepal_width  petal_length  petal_width species[m
+[32m+[m[32m0           5.1          3.5           1.4          0.2  setosa[m
+[32m+[m[32m1           4.9          3.0           1.4          0.2  setosa[m
+[32m+[m[32m2           4.7          3.2           1.3          0.2  setosa[m
+[32m+[m[32m3           4.6          3.1           1.5          0.2  setosa[m
+[32m+[m[32m4           5.0          3.6           1.4          0.2  setosa[m
+[32m+[m
+[32m+[m[32mDataset Information:[m
+[32m+[m[32m<class 'pandas.core.frame.DataFrame'>[m
+[32m+[m[32mRangeIndex: 150 entries, 0 to 149[m
+[32m+[m[32mData columns (total 5 columns):[m
+[32m+[m[32m #   Column        Non-Null Count  Dtype[m[41m  [m
+[32m+[m[32m---  ------        --------------  -----[m[41m  [m
+[32m+[m[32m 0   sepal_length  150 non-null    float64[m
+[32m+[m[32m 1   sepal_width   150 non-null    float64[m
+[32m+[m[32m 2   petal_length  150 non-null    float64[m
+[32m+[m[32m 3   petal_width   150 non-null    float64[m
+[32m+[m[32m 4   species       150 non-null    object[m[41m [m
+[32m+[m[32mdtypes: float64(4), object(1)[m
+[32m+[m[32mmemory usage: 6.0+ KB[m
+[32m+[m[32mNone[m
+[32m+[m
+[32m+[m[32mNumber of rows and columns:[m
+[32m+[m[32m(150, 5)[m
+\ No newline at end of file[m
+[1mdiff --git a/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/program.py b/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/program.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..db66ade[m
+[1m--- /dev/null[m
+[1m+++ b/Experiment-1_PandasFileHandling/Program-1_ReadOnlineCSV/program.py[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32mimport pandas as pd[m
+[32m+[m[32murl="https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"[m
+[32m+[m[32mdf=pd.read_csv(url)[m
+[32m+[m[32mprint("First five rows of the dataset:")[m
+[32m+[m[32mprint(df.head())[m
+[32m+[m[32mprint("\nDataset Information:")[m
+[32m+[m[32mprint(df.info())[m
+[32m+[m[32mprint("\nNumber of rows and columns:")[m
+[32m+[m[32mprint(df.shape)[m
+\ No newline at end of file[m
+[1mdiff --git a/Experiment-1_PandasFileHandling/Program-2_Write_CSV/iris_output.csv b/Experiment-1_PandasFileHandling/Program-2_Write_CSV/iris_output.csv[m
+[1mnew file mode 100644[m
+[1mindex 0000000..20bd6ee[m
+[1m--- /dev/null[m
+[1m+++ b/Experiment-1_PandasFileHandling/Program-2_Write_CSV/iris_output.csv[m
+[36m@@ -0,0 +1,151 @@[m
+[32m+[m[32msepal_length,sepal_width,petal_length,petal_width,species[m
+[32m+[m[32m5.1,3.5,1.4,0.2,setosa[m
+[32m+[m[32m4.9,3.0,1.4,0.2,setosa[m
+[32m+[m[32m4.7,3.2,1.3,0.2,setosa[m
+[32m+[m[32m4.6,3.1,1.5,0.2,setosa[m
+[32m+[m[32m5.0,3.6,1.4,0.2,setosa[m
+[32m+[m[32m5.4,3.9,1.7,0.4,setosa[m
+[32m+[m[32m4.6,3.4,1.4,0.3,setosa[m
+[32m+[m[32m5.0,3.4,1.5,0.2,setosa[m
+[32m+[m[32m4.4,2.9,1.4,0.2,setosa[m
+[32m+[m[32m4.9,3.1,1.5,0.1,setosa[m
+[32m+[m[32m5.4,3.7,1.5,0.2,setosa[m
+[32m+[m[32m4.8,3.4,1.6,0.2,setosa[m
+[32m+[m[32m4.8,3.0,1.4,0.1,setosa[m
+[32m+[m[32m4.3,3.0,1.1,0.1,setosa[m
+[32m+[m[32m5.8,4.0,1.2,0.2,setosa[m
+[32m+[m[32m5.7,4.4,1.5,0.4,setosa[m
+[32m+[m[32m5.4,3.9,1.3,0.4,setosa[m
+[32m+[m[32m5.1,3.5,1.4,0.3,setosa[m
+[32m+[m[32m5.7,3.8,1.7,0.3,setosa[m
+[32m+[m[32m5.1,3.8,1.5,0.3,setosa[m
+[32m+[m[32m5.4,3.4,1.7,0.2,setosa[m
+[32m+[m[32m5.1,3.7,1.5,0.4,setosa[m
+[32m+[m[32m4.6,3.6,1.0,0.2,setosa[m
+[32m+[m[32m5.1,3.3,1.7,0.5,setosa[m
+[32m+[m[32m4.8,3.4,1.9,0.2,setosa[m
+[32m+[m[32m5.0,3.0,1.6,0.2,setosa[m
+[32m+[m[32m5.0,3.4,1.6,0.4,setosa[m
+[32m+[m[32m5.2,3.5,1.5,0.2,setosa[m
+[32m+[m[32m5.2,3.4,1.4,0.2,setosa[m
+[32m+[m[32m4.7,3.2,1.6,0.2,setosa[m
+[32m+[m[32m4.8,3.1,1.6,0.2,setosa[m
+[32m+[m[32m5.4,3.4,1.5,0.4,setosa[m
+[32m+[m[32m5.2,4.1,1.5,0.1,setosa[m
+[32m+[m[32m5.5,4.2,1.4,0.2,setosa[m
+[32m+[m[32m4.9,3.1,1.5,0.2,setosa[m
+[32m+[m[32m5.0,3.2,1.2,0.2,setosa[m
+[32m+[m[32m5.5,3.5,1.3,0.2,setosa[m
+[32m+[m[32m4.9,3.6,1.4,0.1,setosa[m
+[32m+[m[32m4.4,3.0,1.3,0.2,setosa[m
+[32m+[m[32m5.1,3.4,1.5,0.2,setosa[m
+[32m+[m[32m5.0,3.5,1.3,0.3,setosa[m
+[32m+[m[32m4.5,2.3,1.3,0.3,setosa[m
+[32m+[m[32m4.4,3.2,1.3,0.2,setosa[m
+[32m+[m[32m5.0,3.5,1.6,0.6,setosa[m
+[32m+[m[32m5.1,3.8,1.9,0.4,setosa[m
+[32m+[m[32m4.8,3.0,1.4,0.3,setosa[m
+[32m+[m[32m5.1,3.8,1.6,0.2,setosa[m
+[32m+[m[32m4.6,3.2,1.4,0.2,setosa[m
+[32m+[m[32m5.3,3.7,1.5,0.2,setosa[m
+[32m+[m[32m5.0,3.3,1.4,0.2,setosa[m
+[32m+[m[32m7.0,3.2,4.7,1.4,versicolor[m
+[32m+[m[32m6.4,3.2,4.5,1.5,versicolor[m
+[32m+[m[32m6.9,3.1,4.9,1.5,versicolor[m
+[32m+[m[32m5.5,2.3,4.0,1.3,versicolor[m
+[32m+[m[32m6.5,2.8,4.6,1.5,versicolor[m
+[32m+[m[32m5.7,2.8,4.5,1.3,versicolor[m
+[32m+[m[32m6.3,3.3,4.7,1.6,versicolor[m
+[32m+[m[32m4.9,2.4,3.3,1.0,versicolor[m
+[32m+[m[32m6.6,2.9,4.6,1.3,versicolor[m
+[32m+[m[32m5.2,2.7,3.9,1.4,versicolor[m
+[32m+[m[32m5.0,2.0,3.5,1.0,versicolor[m
+[32m+[m[32m5.9,3.0,4.2,1.5,versicolor[m
+[32m+[m[32m6.0,2.2,4.0,1.0,versicolor[m
+[32m+[m[32m6.1,2.9,4.7,1.4,versicolor[m
+[32m+[m[32m5.6,2.9,3.6,1.3,versicolor[m
+[32m+[m[32m6.7,3.1,4.4,1.4,versicolor[m
+[32m+[m[32m5.6,3.0,4.5,1.5,versicolor[m
+[32m+[m[32m5.8,2.7,4.1,1.0,versicolor[m
+[32m+[m[32m6.2,2.2,4.5,1.5,versicolor[m
+[32m+[m[32m5.6,2.5,3.9,1.1,versicolor[m
+[32m+[m[32m5.9,3.2,4.8,1.8,versicolor[m
+[32m+[m[32m6.1,2.8,4.0,1.3,versicolor[m
+[32m+[m[32m6.3,2.5,4.9,1.5,versicolor[m
+[32m+[m[32m6.1,2.8,4.7,1.2,versicolor[m
+[32m+[m[32m6.4,2.9,4.3,1.3,versicolor[m
+[32m+[m[32m6.6,3.0,4.4,1.4,versicolor[m
+[32m+[m[32m6.8,2.8,4.8,1.4,versicolor[m
+[32m+[m[32m6.7,3.0,5.0,1.7,versicolor[m
+[32m+[m[32m6.0,2.9,4.5,1.5,versicolor[m
+[32m+[m[32m5.7,2.6,3.5,1.0,versicolor[m
+[32m+[m[32m5.5,2.4,3.8,1.1,versicolor[m
+[32m+[m[32m5.5,2.4,3.7,1.0,versicolor[m
+[32m+[m[32m5.8,2.7,3.9,1.2,versicolor[m
+[32m+[m[32m6.0,2.7,5.1,1.6,versicolor[m
+[32m+[m[32m5.4,3.0,4.5,1.5,versicolor[m
+[32m+[m[32m6.0,3.4,4.5,1.6,versicolor[m
+[32m+[m[32m6.7,3.1,4.7,1.5,versicolor[m
+[32m+[m[32m6.3,2.3,4.4,1.3,versicolor[m
+[32m+[m[32m5.6,3.0,4.1,1.3,versicolor[m
+[32m+[m[32m5.5,2.5,4.0,1.3,versicolor[m
+[32m+[m[32m5.5,2.6,4.4,1.2,versicolor[m
+[32m+[m[32m6.1,3.0,4.6,1.4,versicolor[m
+[32m+[m[32m5.8,2.6,4.0,1.2,versicolor[m
+[32m+[m[32m5.0,2.3,3.3,1.0,versicolor[m
+[32m+[m[32m5.6,2.7,4.2,1.3,versicolor[m
+[32m+[m[32m5.7,3.0,4.2,1.2,versicolor[m
+[32m+[m[32m5.7,2.9,4.2,1.3,versicolor[m
+[32m+[m[32m6.2,2.9,4.3,1.3,versicolor[m
+[32m+[m[32m5.1,2.5,3.0,1.1,versicolor[m
+[32m+[m[32m5.7,2.8,4.1,1.3,versicolor[m
+[32m+[m[32m6.3,3.3,6.0,2.5,virginica[m
+[32m+[m[32m5.8,2.7,5.1,1.9,virginica[m
+[32m+[m[32m7.1,3.0,5.9,2.1,virginica[m
+[32m+[m[32m6.3,2.9,5.6,1.8,virginica[m
+[32m+[m[32m6.5,3.0,5.8,2.2,virginica[m
+[32m+[m[32m7.6,3.0,6.6,2.1,virginica[m
+[32m+[m[32m4.9,2.5,4.5,1.7,virginica[m
+[32m+[m[32m7.3,2.9,6.3,1.8,virginica[m
+[32m+[m[32m6.7,2.5,5.8,1.8,virginica[m
+[32m+[m[32m7.2,3.6,6.1,2.5,virginica[m
+[32m+[m[32m6.5,3.2,5.1,2.0,virginica[m
+[32m+[m[32m6.4,2.7,5.3,1.9,virginica[m
+[32m+[m[32m6.8,3.0,5.5,2.1,virginica[m
+[32m+[m[32m5.7,2.5,5.0,2.0,virginica[m
+[32m+[m[32m5.8,2.8,5.1,2.4,virginica[m
+[32m+[m[32m6.4,3.2
