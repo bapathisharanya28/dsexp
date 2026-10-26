@@ -1,0 +1,22 @@
+[
+    {
+        "Roll No":101,
+        "Name":"Anu",
+        "Department":"IT"
+    },
+    {
+        "Roll No":102,
+        "Name":"Bobby",
+        "Department":"IT"
+    },
+    {
+        "Roll No":103,
+        "Name":"Cheriy",
+        "Department":"CSE"
+    },
+    {
+        "Roll No":104,
+        "Name":"Duke",
+        "Department":"DS"
+    }
+]
